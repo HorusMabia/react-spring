@@ -1,6 +1,9 @@
+// TODO This entire file doesn't work yet with RTK 1.9.3 master
+
 import assert from 'node:assert'
 import path from 'path'
 import { importMetaResolve } from 'resolve-esm'
+
 import { animated, useSpring } from 'react-spring'
 
 console.log('Testing Node with ESM imports...')
@@ -26,7 +29,7 @@ for (let [fn, name, category] of entries) {
   }
 }
 
-const moduleNames = [['react-spring', 'dist/index.js']]
+const moduleNames = [['react-spring', 'dist/react-spring.mjs']]
 
 ;(async () => {
   for (let [moduleName, expectedFilename] of moduleNames) {

@@ -26,7 +26,7 @@ for (let [fn, name, category] of entries) {
   }
 }
 
-const moduleNames = [['react-spring', 'dist/index.js']]
+const moduleNames = [['react-spring', 'dist/cjs/index.js']]
 
 for (let [moduleName, expectedFilename] of moduleNames) {
   const modulePath = require.resolve(moduleName)
