@@ -1,9 +1,16 @@
 {
   "name": "@react-spring/parallax",
   "version": "9.7.2",
-  "main": "dist/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/react-spring_parallax.legacy-esm.js",
+  "types": "./dist/react-spring_parallax.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/react-spring_parallax.d.ts",
+      "import": "./dist/react-spring_parallax.mjs",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "files": [
     "dist/*",
     "README.md",
@@ -28,9 +35,9 @@
     "Josh Ellis (https://github.com/joshuaellis)"
   ],
   "scripts": {
-    "build": "tsup --legacy-output",
+    "build": "tsup",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "dev": "tsup",
+    "dev": "tsup --watch",
     "lint": "TIMING=1 eslint \"src/**/*.ts*\"",
     "pack": "yarn pack",
     "test": "vite serve ./test"

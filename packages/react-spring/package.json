@@ -1,9 +1,16 @@
 {
   "name": "react-spring",
   "version": "9.7.1",
-  "main": "dist/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/react-spring.legacy-esm.js",
+  "types": "./dist/react-spring.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/react-spring.d.ts",
+      "import": "./dist/react-spring.mjs",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "files": [
     "dist/*",
     "README.md",
@@ -40,9 +47,9 @@
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "scripts": {
-    "build": "tsup --legacy-output",
+    "build": "tsup",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "dev": "tsup",
+    "dev": "tsup --watch",
     "lint": "TIMING=1 eslint \"src/**/*.ts*\"",
     "pack": "yarn pack"
   }

@@ -161,13 +161,14 @@ jobs:
       matrix:
         # keep at 16 because of webpack 4
         node: ['16.x']
-        example: [
+        example:
+          [
             'cra4',
             'cra5',
             'next',
             'vite',
             'node-standard',
-            # 'node-esm',
+            'node-esm',
             'are-the-types-wrong',
           ]
     defaults:

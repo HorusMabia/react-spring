@@ -2,9 +2,16 @@
   "name": "@react-spring/types",
   "version": "9.7.2",
   "description": "Internal package with TypeScript stuff",
-  "main": "dist/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/react-spring_types.legacy-esm.js",
+  "types": "./dist/react-spring_types.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/react-spring_types.d.ts",
+      "import": "./dist/react-spring_types.mjs",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "files": [
     "dist/*",
     "README.md",
@@ -29,9 +36,9 @@
     "Josh Ellis (https://github.com/joshuaellis)"
   ],
   "scripts": {
-    "build": "tsup --legacy-output",
+    "build": "tsup",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "dev": "tsup",
+    "dev": "tsup --watch",
     "lint": "TIMING=1 eslint \"src/**/*.ts*\"",
     "pack": "yarn pack"
   }

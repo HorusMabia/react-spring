@@ -1,9 +1,16 @@
 {
   "name": "@react-spring/core",
   "version": "9.7.2",
-  "main": "dist/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/react-spring_core.legacy-esm.js",
+  "types": "./dist/react-spring_core.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/react-spring_core.d.ts",
+      "import": "./dist/react-spring_core.mjs",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "files": [
     "dist/*",
     "README.md",
@@ -32,15 +39,14 @@
     "Josh Ellis (https://github.com/joshuaellis)"
   ],
   "scripts": {
-    "build": "tsup --legacy-output",
+    "build": "tsup",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "dev": "tsup",
+    "dev": "tsup --watch",
     "lint": "TIMING=1 eslint \"src/**/*.ts*\"",
     "pack": "yarn pack"
   },
   "dependencies": {
     "@react-spring/animated": "~9.7.2",
-    "@react-spring/rafz": "~9.7.2",
     "@react-spring/shared": "~9.7.2",
     "@react-spring/types": "~9.7.2"
   },
