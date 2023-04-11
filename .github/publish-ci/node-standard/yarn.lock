@@ -149,8 +149,8 @@ __metadata:
   dependencies:
     react: ^18.2.0
     react-dom: ^18.2.0
-    react-spring: ^9.7.0
-    resolve-esm: ^1.4.0
+    react-spring: ^9.7.1
+    resolve-esm: ^1.4.1
   languageName: unknown
   linkType: soft
 
@@ -184,7 +184,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-spring@npm:^9.7.0":
+"react-spring@npm:^9.7.1":
   version: 9.7.1
   resolution: "react-spring@npm:9.7.1"
   dependencies:
@@ -210,12 +210,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve-esm@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "resolve-esm@npm:1.4.0"
+"resolve-esm@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "resolve-esm@npm:1.4.1"
   dependencies:
     callsites: ~4.0.0
-  checksum: f0e1fad4c49abe41012ec9f59958d9d8d356b12c92a784765b6d69f8dccd07a609656f83a86278c76b579a953b02b893d3c3ea7c2ad2be607b15d7f0c942b8f8
+  checksum: 487ea1388e7c19a1ad967ee46dafacb3439a93833ada45ddc113c87c8468a18fd55fa1c40093236bd833636497665119a488443a698944ddd9e453860e86a1db
   languageName: node
   linkType: hard
 

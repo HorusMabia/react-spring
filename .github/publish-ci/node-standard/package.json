@@ -9,9 +9,9 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-spring": "^9.7.0"
+    "react-spring": "^9.7.1"
   },
   "devDependencies": {
-    "resolve-esm": "^1.4.0"
+    "resolve-esm": "^1.4.1"
   }
 }
